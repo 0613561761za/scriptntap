@@ -22,15 +22,7 @@ fi
 # go to root
 cd
 
-# check registered ip
-wget -q -O /etc/imd https://raw.githubusercontent.com/faismart/scriptntap/master/daftarip.txt
-wget -q -O daftarip https://raw.githubusercontent.com/faismart/scriptntap/master/daftarip.txt
-if ! grep -w -q $MYIP daftarip; then
-	echo "Maaf, hanya IP terdaftar yang bisa menggunakan script ini!"
-	echo "Hubungi Fa'i Smart (Whatsapp: 081556644323)"
-	rm -f /root/daftarip
-	exit
-fi
+
 
     NORMAL=`echo "\033[m"`
     MENU=`echo "\033[36m"` #Blue
@@ -113,7 +105,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -q -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/faismart/scriptntap/master/null/nginx.conf
 mkdir -p /home/fns/public_html
-echo "<pre>Default Webpage</pre><br/><pre>Auto Installer Script Premium - ForNesia Community</pre>" > /home/fns/public_html/index.html
+echo "<pre>Default Webpage</pre><br/><pre>Auto Installer by aditya</pre>" > /home/fns/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/fns/public_html/info.php
 wget -q -O /etc/nginx/conf.d/vps.conf https://raw.githubusercontent.com/faismart/scriptntap/master/null/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
