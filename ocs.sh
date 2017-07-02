@@ -22,15 +22,7 @@ cd
 
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 
-# check registered ip
-wget -q -O /etc/imd https://raw.githubusercontent.com/faismart/scriptntap/master/daftaripocs.txt
-wget -q -O daftaripocs https://raw.githubusercontent.com/faismart/scriptntap/master/daftaripocs.txt
-if ! grep -w -q $MYIP daftaripocs; then
-	echo "Maaf, hanya IP terdaftar yang bisa menggunakan script ini!"
-	echo "Hubungi Fa'i Smart (Whatsapp: 081556644323)"
-	rm -f /root/daftaripocs
-	exit
-fi
+
 
 #https://github.com/adenvt/OcsPanels/wiki/tutor-debian
 
