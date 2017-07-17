@@ -106,7 +106,7 @@ echo "$so2"
 apt-get -y install git
 cd /home/ocs/public_html
 git init
-git remote add origin https://github.com/faismart/ocspanel.git
+git remote add origin https://github.com/kangismet/ocspanel.git
 git pull origin master
 
 chmod 777 /home/ocs/public_html/config
